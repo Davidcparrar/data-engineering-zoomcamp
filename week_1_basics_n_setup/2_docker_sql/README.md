@@ -162,20 +162,26 @@ python ingest_data.py \
 Build the image
 
 ```bash
-docker build -t taxi_ingest:v001 .
+sudo docker build -t taxi_ingest:v001 .
 ```
+"Need sudo to overcome  => ERROR [internal] load build definition from..." error
 
 Run the script with Docker
 
 ```bash
 URL="http://172.24.208.1:8000/yellow_tripdata_2021-01.csv"
+```
 
+Check proper network 
+```bash
+  docker network ls
+```
 docker run -it \
-  --network=pg-network \
+  --network=2_docker_sql_default \
   taxi_ingest:v001 \
     --user=root \
     --password=root \
-    --host=pg-database \
+    --host=pgdatabase \
     --port=5432 \
     --db=ny_taxi \
     --table_name=yellow_taxi_trips \
