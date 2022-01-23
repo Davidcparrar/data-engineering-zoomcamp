@@ -3,7 +3,8 @@ locals {
 }
 
 variable "project" {
-  description = "dtc-de-dcp-2022"
+  description = "Your GCP Project dataset_id"
+  default     = "dtc-de-dcp-2022"
 }
 
 variable "region" {
