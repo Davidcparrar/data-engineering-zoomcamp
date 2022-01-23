@@ -28,8 +28,11 @@ def main(params):
 
     df = next(df_iter)
 
-    df.tpep_pickup_datetime = pd.to_datetime(df.tpep_pickup_datetime)
-    df.tpep_dropoff_datetime = pd.to_datetime(df.tpep_dropoff_datetime)
+    if "tpep_pickup_datetime" in df.columns:
+        df.tpep_pickup_datetime = pd.to_datetime(df.tpep_pickup_datetime)
+
+    if "tpep_dropoff_datetime" in df.columns:
+        df.tpep_dropoff_datetime = pd.to_datetime(df.tpep_dropoff_datetime)
 
     df.head(n=0).to_sql(name=table_name, con=engine, if_exists="replace")
 
@@ -44,8 +47,11 @@ def main(params):
             print("End process")
             break
 
-        df.tpep_pickup_datetime = pd.to_datetime(df.tpep_pickup_datetime)
-        df.tpep_dropoff_datetime = pd.to_datetime(df.tpep_dropoff_datetime)
+        if "tpep_pickup_datetime" in df.columns:
+            df.tpep_pickup_datetime = pd.to_datetime(df.tpep_pickup_datetime)
+
+        if "tpep_dropoff_datetime" in df.columns:
+            df.tpep_dropoff_datetime = pd.to_datetime(df.tpep_dropoff_datetime)
 
         df.to_sql(name=table_name, con=engine, if_exists="append")
 
