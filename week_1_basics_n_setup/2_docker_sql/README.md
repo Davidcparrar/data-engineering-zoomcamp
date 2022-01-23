@@ -169,7 +169,7 @@ sudo docker build -t taxi_ingest:v001 .
 Run the script with Docker
 
 ```bash
-URL="http://172.24.208.1:8000/yellow_tripdata_2021-01.csv"
+URL="https://s3.amazonaws.com/nyc-tlc/trip+data/yellow_tripdata_2021-01.csv"
 ```
 
 Check proper network 
