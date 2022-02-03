@@ -43,7 +43,7 @@ Question: how many DAG runs are green for data in 2019 after finishing everythin
 
 ** R / 12**
 
-![Airflow Zones](week_2_data_ingestion/Figs/FHV_pipeline.PNG?raw=true 'For Hire Pipeline')
+![Airflow Zones](../../Figs/FHV_pipeline.PNG?raw=true 'For Hire Pipeline')
 
 ## Question 4: DAG for Zones (2 points)
 
