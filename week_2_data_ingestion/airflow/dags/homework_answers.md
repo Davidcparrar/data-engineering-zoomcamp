@@ -20,7 +20,7 @@ How often do we need to run this DAG?
 * Yearly
 * Once
 
-![Airflow Yellow](week_2_data_ingestion/Figs/FHV_pipeline.PNG?raw=true 'Yellow trips Pipeline')
+![Airflow Yellow](../../Figs/FHV_pipeline.PNG?raw=true 'Yellow trips Pipeline')
 
 ## Question 3: DAG for FHV Data (2 points)
 
@@ -54,9 +54,9 @@ How often does it need to run?
 * Yearly
 * **Once**
 
-![Airflow Zones](week_2_data_ingestion/Figs/Zones_pipeline.PNG?raw=true 'Zones Pipeline')
+![Airflow Zones](../../Figs/Zones_pipeline.PNG?raw=true 'Zones Pipeline')
 
 
 ### Files uploaded
 
-![GCS](week_2_data_ingestion/Figs/Uploaded_files.PNG?raw=true 'Files GCS')
+![GCS](../../Figs/Uploaded_Files.PNG?raw=true 'Files GCS')
